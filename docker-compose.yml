@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  dailytrack:
+    build: .
+    container_name: dailytrack
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./dailytrack.db:/app/dailytrack.db
+    restart: unless-stopped
